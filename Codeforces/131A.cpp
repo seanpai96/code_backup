@@ -25,7 +25,11 @@ int main(){ _
             }
         }
         if(allUpper){
-            putchar(toupper(s[0]));
+            if(isupper(s[0])){
+                putchar(tolower(s[0]));
+            }else{
+                putchar(toupper(s[0]));
+            }
             for(int i=1;i<s.length();i++)
                 putchar(tolower(s[i]));
             cout<<'\n';
